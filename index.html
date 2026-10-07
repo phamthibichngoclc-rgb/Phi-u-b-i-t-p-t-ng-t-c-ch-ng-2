@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hóa học 12 – Bài 7: Ôn tập Chương 2</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f4f6ff,#101426);--surface:light-dark(#fff,#1b2037);--ink:light-dark(#202546,#f1f3ff);--muted:light-dark(#626b8b,#b5bddc);--line:light-dark(#e1e5f5,#343b5d);--purple:light-dark(#6655dc,#a99cff);--blue:light-dark(#327de5,#78b5ff);--good:light-dark(#e2f8ec,#143b31);--bad:light-dark(#fff0ef,#482522)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}.app{min-height:100vh;background:var(--bg);padding:24px 16px 48px}.wrap{max-width:960px;margin:auto}.hero{padding:28px;border-radius:24px;color:white;background:linear-gradient(125deg,#4034a8,#6755dc 54%,#2f8cce);position:relative;overflow:hidden;box-shadow:0 16px 38px #4338a52b}.hero:after{content:'C₆H₁₀O₅';position:absolute;right:22px;bottom:-15px;font-size:clamp(38px,8vw,86px);font-weight:900;color:#ffffff16;letter-spacing:-4px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;opacity:.85}.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.12;margin:10px 0}.hero p{max-width:640px;margin:0;color:#f0efff}.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{border:1px solid #ffffff55;background:#ffffff18;border-radius:99px;padding:5px 11px;font-size:13px}.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:18px;box-shadow:0 5px 18px #1c23500a}.section-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:15px}.num{flex:0 0 38px;height:38px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#6755dc,#3987e8);color:#fff;font-weight:800}.section-head h2{font-size:20px;margin:0}.sub{font-size:13px;color:var(--muted);margin:2px 0 0}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:13px;color:var(--muted);font-weight:700;margin-bottom:5px}.field input{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:12px;border-radius:11px;font:inherit;min-width:0}.goals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.goal{background:var(--bg);border:1px solid var(--line);border-radius:13px;padding:13px;font-size:14px}.goal b{display:block;color:var(--purple);margin-bottom:4px}.question{border-top:1px solid var(--line);padding:15px 0}.question:first-of-type{border-top:0}.qtitle{font-weight:750;margin-bottom:10px}.options{display:grid;gap:8px}.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;transition:.15s}.opt:hover{border-color:var(--purple)}.opt input{accent-color:var(--purple);margin-top:5px}.opt.correct,.match-item.correct,.drop-slot.correct{background:var(--good);border-color:#34a978}.opt.wrong,.match-item.wrong{background:var(--bad);border-color:#df6969}.feedback{font-size:13px;font-weight:700;margin-top:7px;min-height:18px}.hint{color:var(--muted);font-size:13px}.tfrow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.tfrow:last-child{border-bottom:0}.tfchoices{display:flex;gap:6px}.tfchoices label{border:1px solid var(--line);padding:6px 10px;border-radius:9px;cursor:pointer;font-size:13px}.tfchoices input{accent-color:var(--purple)}.fillinput{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:9px 10px;border-radius:9px;width:min(100%,300px);font:inherit}.matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.match-item{border:1px solid var(--line);border-radius:11px;padding:11px;font-size:14px}.match-item select{margin-top:7px;width:100%;padding:9px;border-radius:8px;background:var(--bg);color:var(--ink);border:1px solid var(--line)}.drag-area{display:grid;grid-template-columns:1fr 1.15fr;gap:14px}.bank,.targets{border:1px solid var(--line);border-radius:15px;padding:14px;background:var(--bg)}.bank h3,.targets h3{font-size:15px;margin:0 0 10px}.tile-list{display:grid;gap:8px}.tile{border:1px solid #b7b0ff;background:light-dark(#f0eeff,#292747);border-radius:11px;padding:10px;cursor:pointer;touch-action:manipulation;user-select:none;font-weight:650;font-size:14px}.tile.selected{outline:3px solid var(--purple);outline-offset:1px}.tile.locked{opacity:.55;cursor:default}.drop-slot{border:2px dashed var(--line);border-radius:12px;min-height:68px;padding:9px;margin-bottom:9px;cursor:pointer;display:flex;flex-direction:column;justify-content:center;gap:4px}.drop-slot:last-child{margin-bottom:0}.drop-slot .target-title{font-weight:800;font-size:13px}.drop-slot .placed{font-size:14px;color:var(--purple);font-weight:700}.drop-slot.correct{border-style:solid}.drop-slot .slotmsg{font-size:12px;font-weight:800}.celebrate{animation:pop .35s ease}@keyframes pop{50%{transform:scale(1.025)}}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{border:0;border-radius:12px;padding:12px 18px;font:inherit;font-weight:800;cursor:pointer}.primary{color:white;background:linear-gradient(120deg,#6655dc,#367fe2)}.secondary{color:var(--ink);background:var(--bg);border:1px solid var(--line)}.result{display:none;margin-top:18px;padding:20px;border-radius:16px;background:linear-gradient(120deg,#e9e7ff,#e2f3ff);color:#252653}.result.show{display:block}.score{font-size:32px;font-weight:900}.remember{background:linear-gradient(130deg,light-dark(#f1efff,#24213f),light-dark(#eaf5ff,#192e45));border:1px solid var(--line);padding:17px;border-radius:14px}.remember li{margin:7px 0}.tiny{font-size:12px;color:var(--muted);margin-top:15px}.formula{font-size:24px;font-weight:900;color:var(--purple)}
+@media(max-width:620px){.app{padding:12px 10px 30px}.hero{padding:23px 19px;border-radius:19px}.card{padding:16px;margin-top:13px;border-radius:16px}.fields,.goals,.drag-area,.matchgrid{grid-template-columns:1fr}.tfrow{grid-template-columns:1fr;gap:7px}.tfchoices{flex-wrap:wrap}.section-head h2{font-size:18px}.hero:after{right:10px;bottom:-6px;font-size:45px}.btn{flex:1}.drop-slot{min-height:64px}}
+</style></head>
+<body><main class="app"><div class="wrap" id="appRoot"></div></main>
+<script>
+/*
+  CONTENT LAYER
+  ----------------
+  Chỉ thay đổi LESSON_DATA để tái sử dụng cùng một giao diện/chức năng
+  cho bài học khác. Không cần sửa CSS hoặc logic chấm điểm.
+*/
+const LESSON_DATA={
+  meta:{
+    subject:"HÓA HỌC 12",
+    grade:"12",
+    title:"BÀI 7: ÔN TẬP CHƯƠNG 2",
+    intro:"Tổng hợp kiến thức trọng tâm về cấu tạo, tính chất hóa học và dấu hiệu nhận biết của các carbohydrate.",
+    duration:"15–20 phút",
+    topic:"Carbohydrate"
+  },
+  goals:[
+    {label:"Cấu tạo",text:"So sánh được công thức phân tử, phân loại và đặc điểm cấu tạo của glucose, fructose, saccharose, maltose, tinh bột và cellulose."},
+    {label:"Tính chất",text:"Phân biệt được các carbohydrate qua Cu(OH)₂, phản ứng tráng bạc, nước Br₂ và phản ứng thủy phân."},
+    {label:"Nhận biết",text:"Hệ thống hóa các dấu hiệu đặc trưng và sản phẩm phản ứng để vận dụng vào bài tập tổng hợp."}
+  ],
+  mcq:[
+    {id:"m1",text:"Chất nào sau đây thuộc nhóm monosaccharide?",options:[["A","Saccharose"],["B","Maltose"],["C","Glucose"],["D","Tinh bột"]],answer:"C"},
+    {id:"m2",text:"Đặc điểm cấu tạo đúng của cellulose là:",options:[["A","Gồm 2 α-glucose liên kết α-1,4-glycoside"],["B","Mạch thẳng không phân nhánh gồm các đơn vị β-glucose liên kết β-1,4-glycoside"],["C","Gồm α-glucose và β-fructose liên kết α-1,2-glycoside"],["D","Gồm amylose và amylopectin"]],answer:"B"},
+    {id:"m3",text:"Chất nào sau đây làm mất màu nước Br₂ theo bảng kiến thức ôn tập?",options:[["A","Fructose"],["B","Saccharose"],["C","Maltose"],["D","Cellulose"]],answer:"C"},
+    {id:"m4",text:"Thủy phân hoàn toàn saccharose thu được:",options:[["A","2 glucose"],["B","Glucose và fructose"],["C","2 fructose"],["D","Glucose và ethanol"]],answer:"B"}
+  ],
+  trueFalse:[
+    {id:"t1",text:"Glucose cho phản ứng tráng bạc và làm mất màu nước Br₂.",answer:true},
+    {id:"t2",text:"Fructose làm mất màu nước Br₂ trong các điều kiện được nêu trong bảng ôn tập.",answer:false},
+    {id:"t3",text:"Tinh bột cho màu xanh tím với dung dịch I₂.",answer:true},
+    {id:"t4",text:"Maltose không có tính khử và không tham gia phản ứng tráng bạc.",answer:false}
+  ],
+  fill:[
+    {id:"f1",text:"Công thức phân tử của saccharose là",placeholder:"Ví dụ: C12H22O11",answers:["C12H22O11","c12h22o11"]},
+    {id:"f2",text:"Thủy phân hoàn toàn tinh bột thu được",answers:["glucose","glucozơ","glucozo"]},
+    {id:"f3",text:"Tinh bột tạo màu xanh tím với dung dịch",placeholder:"Tên thuốc thử",answers:["i2","I2","i 2","iod","iodine"]}
+  ],
+  matching:{
+    items:[
+      {id:"n1",label:"Glucose",answer:"A"},
+      {id:"n2",label:"Saccharose",answer:"B"},
+      {id:"n3",label:"Tinh bột",answer:"C"},
+      {id:"n4",label:"Cellulose",answer:"D"}
+    ],
+    choices:[
+      ["A","Tráng bạc, nước Br₂ làm mất màu"],
+      ["B","Thủy phân cho glucose + fructose"],
+      ["C","Cho màu xanh tím với I₂"],
+      ["D","Mạch thẳng β-glucose; thủy phân cho glucose"]
+    ]
+  },
+  dragDrop:{
+    tiles:[
+      {id:"glucose",label:"Glucose"},
+      {id:"fructose",label:"Fructose"},
+      {id:"sucrose",label:"Saccharose"},
+      {id:"starch",label:"Tinh bột"},
+      {id:"cellulose",label:"Cellulose"}
+    ],
+    targets:[
+      {id:"glucose",label:"Tráng bạc và làm mất màu nước Br₂"},
+      {id:"fructose",label:"Trong môi trường kiềm có thể chuyển thành glucose"},
+      {id:"sucrose",label:"Thủy phân cho glucose + fructose"},
+      {id:"starch",label:"Tạo màu xanh tím với I₂"},
+      {id:"cellulose",label:"Mạch thẳng không phân nhánh, β-1,4-glycoside"}
+    ]
+  },
+  images:[],
+  remember:{
+    formula:"C₆H₁₂O₆ · C₁₂H₂₂O₁₁ · (C₆H₁₀O₅)ₙ",
+    points:[
+      "Glucose và fructose là monosaccharide; saccharose và maltose là disaccharide; tinh bột và cellulose là polysaccharide.",
+      "Saccharose gồm 1 α-glucose và 1 β-fructose, liên kết α-1,2-glycoside; maltose gồm 2 α-glucose, liên kết α-1,4-glycoside.",
+      "Tinh bột gồm amylose và amylopectin; cellulose là mạch thẳng không phân nhánh gồm các đơn vị β-glucose liên kết β-1,4-glycoside.",
+      "Glucose và maltose có phản ứng tráng bạc; glucose và maltose làm mất màu nước Br₂ theo bảng kiến thức. Fructose không làm mất màu nước Br₂ trong bảng nhưng có thể chuyển thành glucose trong môi trường kiềm.",
+      "Saccharose, maltose, tinh bột và cellulose đều có phản ứng thủy phân; sản phẩm của saccharose là glucose + fructose, còn tinh bột và cellulose cho glucose theo bảng ôn tập.",
+      "Tinh bột tạo màu xanh tím với I₂; cellulose tác dụng HNO₃ đặc và tan trong nước Schweizer."
+    ]
+  }
+};
+
+/* UI + BEHAVIOR LAYER — cố định, không phụ thuộc nội dung môn học */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const maxScore=10;let selected=null;
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
+function norm(s){return (s||"").toLocaleLowerCase("vi").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/đ/g,"d").replace(/\s+/g,"").replace(/[₆₁₀₅ₙ]/g,c=>({"₆":"6","₁":"1","₀":"0","₅":"5","ₙ":"n"}[c]||c)).replace(/[{}]/g,"")}
+function render(){
+  const d=LESSON_DATA;
+  document.title=d.meta.title;
+  $("#appRoot").innerHTML=`
+  <header class="hero"><div class="eyebrow">${esc(d.meta.subject)} · PHIẾU HỌC TẬP TƯƠNG TÁC</div><h1>${esc(d.meta.title.replace(" ","<br> "))}</h1><p>${esc(d.meta.intro)}</p><div class="pills"><span class="pill">⏱ ${esc(d.meta.duration)}</span><span class="pill">🧪 Chủ đề: ${esc(d.meta.topic)}</span><span class="pill">🎯 Tự chấm điểm</span></div></header>
+  <section class="card"><div class="section-head"><div class="num">01</div><div><h2>Thông tin học sinh</h2><p class="sub">Điền thông tin trước khi làm bài.</p></div></div><div class="fields"><div class="field"><label for="student">Họ và tên</label><input id="student" placeholder="Nhập họ tên"></div><div class="field"><label for="classroom">Lớp</label><input id="classroom" placeholder="Ví dụ: 12A1"></div></div></section>
+  <section class="card"><div class="section-head"><div class="num">02</div><div><h2>Mục tiêu bài học</h2><p class="sub">Sau bài học, em có thể…</p></div></div><div class="goals">${d.goals.map((g,i)=>`<div class="goal"><b>${String(i+1).padStart(2,"0")} · ${esc(g.label)}</b>${esc(g.text)}</div>`).join("")}</div></section>
+  <section class="card" id="mcq"><div class="section-head"><div class="num">03</div><div><h2>Trắc nghiệm nhiều lựa chọn</h2><p class="sub">Chọn một đáp án đúng cho mỗi câu. (${d.mcq.length} câu · 4 điểm)</p></div></div>${d.mcq.map((q,i)=>`<div class="question" data-q="${esc(q.id)}" data-type="radio" data-answer="${esc(q.answer)}"><div class="qtitle">Câu ${i+1}. ${esc(q.text)}</div><div class="options">${q.options.map(([v,t])=>`<label class="opt"><input type="radio" name="${esc(q.id)}" value="${esc(v)}"> ${esc(v)}. ${esc(t)}</label>`).join("")}<div class="feedback"></div></div></div>`).join("")}</section>
+  <section class="card" id="tf"><div class="section-head"><div class="num">04</div><div><h2>Đúng hay sai?</h2><p class="sub">Chọn Đúng hoặc Sai. (${d.trueFalse.length} ý · 2 điểm)</p></div></div>${d.trueFalse.map((q,i)=>`<div class="tfrow" data-q="${esc(q.id)}" data-answer="${q.answer}"><div>${i+1}. ${esc(q.text)}</div><div class="tfchoices"><label><input type="radio" name="${esc(q.id)}" value="true"> Đúng</label><label><input type="radio" name="${esc(q.id)}" value="false"> Sai</label></div></div>`).join("")}<div id="tfFeedback" class="feedback"></div></section>
+  <section class="card" id="fill"><div class="section-head"><div class="num">05</div><div><h2>Điền khuyết</h2><p class="sub">Điền từ hoặc công thức còn thiếu. (${d.fill.length} câu · 1,5 điểm)</p></div></div>${d.fill.map((q,i)=>`<div class="question"><div class="qtitle">${i+1}. ${esc(q.text)}</div><input class="fillinput" data-q="${esc(q.id)}" data-answer="${esc(q.answers.join("|"))}" placeholder="${esc(q.placeholder||"")}"><div class="feedback"></div></div>`).join("")}</section>
+  <section class="card" id="match"><div class="section-head"><div class="num">06</div><div><h2>Nối cột kiến thức</h2><p class="sub">Chọn nội dung phù hợp với từng mục ở cột A. (${d.matching.items.length} cặp · 2 điểm)</p></div></div><div class="matchgrid">${d.matching.items.map((q,i)=>`<div class="match-item" data-q="${esc(q.id)}" data-answer="${esc(q.answer)}">${String.fromCharCode(65+i)}. ${esc(q.label)}<select aria-label="Nối ${esc(q.label)}"><option value="">— Chọn cột B —</option>${d.matching.choices.map(([v,t])=>`<option value="${esc(v)}">${esc(v)}. ${esc(t)}</option>`).join("")}</select></div>`).join("")}</div></section>
+  <section class="card" id="drag"><div class="section-head"><div class="num">07</div><div><h2>Thử thách kéo thả / chạm để ghép</h2><p class="sub">Chọn thẻ ở bên trái, sau đó chạm vào vị trí đích. Trên máy tính, em cũng có thể kéo thẻ vào ô. Đúng sẽ khóa đáp án; sai sẽ trả thẻ về kho.</p></div></div><div class="drag-area"><div class="bank"><h3>🧩 Kho thẻ kiến thức</h3><div class="tile-list" id="tileBank">${d.dragDrop.tiles.map(t=>`<div class="tile" tabindex="0" role="button" data-id="${esc(t.id)}" data-label="${esc(t.label)}">${esc(t.label)}</div>`).join("")}</div><div class="feedback" id="dragFeedback" aria-live="polite">Hãy chọn một thẻ để bắt đầu nhé!</div></div><div class="targets"><h3>🎯 Vị trí đích</h3>${d.dragDrop.targets.map(t=>`<div class="drop-slot" tabindex="0" role="button" data-target="${esc(t.id)}"><span class="target-title">${esc(t.label)}</span><span class="slot-content hint">Chạm vào đây để đặt thẻ</span></div>`).join("")}</div></div></section>
+  <section class="card"><div class="section-head"><div class="num">08</div><div><h2>Ghi nhớ cuối bài</h2><p class="sub">Tóm tắt nhanh trước khi nộp bài.</p></div></div><div class="remember"><div class="formula">${esc(d.remember.formula)}</div><ul>${d.remember.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div><div class="tiny">Lưu ý: Phần kéo thả có tính tương tác riêng; điểm tổng kết tính từ các phần câu hỏi có đáp án chấm tự động.</div></section>
+  <div class="actions"><button class="btn primary" id="submitBtn">✓ Nộp bài & tính điểm</button><button class="btn secondary" id="resetBtn">↻ Làm lại</button></div><div class="result" id="result" aria-live="polite"><div class="eyebrow">KẾT QUẢ CỦA EM</div><div class="score" id="scoreText">0 / 10 điểm</div><p id="detailText"></p><p id="encourage"></p></div>`;
+  bindInteractions();
+}
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxNLm6NfUP1OoFloZBhKfu8bjXFjjxJz9GkQDP2-SHiiontOb0-5ibwnnLfcEiEIpFp/exec';
+function guiKetQuaVeSheet(hoTen,lop,diem,soCauDung,soCauSai,soCauChuaLam,tongSoCau){
+  if(!scriptURL) return false;
+  const data=new URLSearchParams({hoTen,lop,diem:String(diem),soCauDung:String(soCauDung),soCauSai:String(soCauSai),soCauChuaLam:String(soCauChuaLam),tongSoCau:String(tongSoCau)});
+  try { return navigator.sendBeacon(scriptURL,data); }
+  catch(e) { try { fetch(scriptURL,{method:'POST',mode:'no-cors',body:data,keepalive:true}); return true; } catch(_) { return false; } }
+}
+function grade(){
+  let earned=0,answered=0,total=0;
+  $$('.question[data-type="radio"]').forEach(q=>{total++;const chosen=$('input:checked',q),ok=!!chosen&&chosen.value===q.dataset.answer;if(chosen)answered++;if(ok)earned+=1;$$('.opt',q).forEach(o=>{o.classList.remove("correct","wrong");const i=$("input",o);if(i.value===q.dataset.answer)o.classList.add("correct");if(i.checked&&!ok)o.classList.add("wrong")});$('.feedback',q).textContent=ok?"Chính xác! 🎉":chosen?"Chưa đúng — xem đáp án được tô xanh.":"Chưa trả lời.";});
+  let tfCorrect=0;$$('.tfrow').forEach(q=>{total++;const c=$('input:checked',q),ok=!!c&&c.value===q.dataset.answer;if(c)answered++;if(ok)tfCorrect++;q.style.background=c?(ok?"var(--good)":"var(--bad)"):"transparent";});earned+=tfCorrect*.5;$("#tfFeedback").textContent=`Đúng ${tfCorrect}/${LESSON_DATA.trueFalse.length} ý · ${(tfCorrect*.5).toFixed(1)}/2 điểm`;
+  let fillCorrect=0;$$('.fillinput').forEach(i=>{total++;const aliases=i.dataset.answer.split("|").map(norm),ok=aliases.includes(norm(i.value));if(i.value.trim())answered++;if(ok)fillCorrect++;i.style.borderColor=ok?"#34a978":i.value.trim()?"#df6969":"var(--line)";i.parentElement.querySelector(".feedback").textContent=ok?"Chính xác! 🎉":i.value.trim()?"Chưa đúng. Đáp án: "+i.dataset.answer.split("|")[0]:"Chưa trả lời.";});earned+=fillCorrect*.5;
+  let matchCorrect=0;$$('.match-item').forEach(q=>{total++;const sel=$("select",q),ok=sel.value===q.dataset.answer;if(sel.value)answered++;if(ok)matchCorrect++;q.classList.toggle("correct",ok);q.classList.toggle("wrong",!!sel.value&&!ok);});earned+=matchCorrect*.5;
+  const score=Math.round(earned*100)/100;
+  const tongSoCau=total;
+  const soCauDung=$$('.question[data-type="radio"]').filter(q=>$('input:checked',q)?.value===q.dataset.answer).length+tfCorrect+fillCorrect+matchCorrect;
+  const soCauChuaLam=total-answered;
+  const soCauSai=total-soCauDung-soCauChuaLam;
+  guiKetQuaVeSheet($('#student').value.trim(),$('#classroom').value.trim(),score,soCauDung,soCauSai,soCauChuaLam,tongSoCau);
+$("#scoreText").textContent=`${score.toLocaleString("vi-VN")} / ${maxScore} điểm`;$("#detailText").textContent=`Trắc nghiệm: ${$$('.question[data-type="radio"]').filter(q=>$("input:checked",q)?.value===q.dataset.answer).length}/${LESSON_DATA.mcq.length} · Đúng/Sai: ${tfCorrect}/${LESSON_DATA.trueFalse.length} · Điền khuyết: ${fillCorrect}/${LESSON_DATA.fill.length} · Nối cột: ${matchCorrect}/${LESSON_DATA.matching.items.length}. Đã trả lời ${answered}/${total} mục chấm điểm.`;$("#encourage").textContent=score>=8?"Rất tốt! Em đã nắm khá vững kiến thức.":score>=5?"Khá ổn! Hãy xem lại các đáp án chưa đúng và phần ghi nhớ.":"Đừng nản nhé! Đọc phần ghi nhớ rồi thử làm lại để củng cố kiến thức.";$("#result").classList.add("show");$("#result").scrollIntoView({behavior:"smooth",block:"center"});
+}
+function selectTile(tile){if(tile.classList.contains("locked"))return;$$('.tile').forEach(t=>t.classList.remove("selected"));selected=tile;tile.classList.add("selected");$("#dragFeedback").textContent="Đã chọn: "+tile.dataset.label+" — hãy chạm vào vị trí đích."}
+function place(tile,slot){if(!tile||!slot||tile.classList.contains("locked")||slot.classList.contains("correct"))return;const ok=tile.dataset.id===slot.dataset.target;if(ok){slot.classList.add("correct","celebrate");$(".slot-content",slot).className="slot-content placed";$(".slot-content",slot).textContent=tile.dataset.label;const msg=document.createElement("span");msg.className="slotmsg";msg.textContent="Chính xác! 🎉";slot.appendChild(msg);tile.classList.add("locked");tile.classList.remove("selected");tile.setAttribute("aria-disabled","true");$("#dragFeedback").textContent="Chính xác! 🎉 Thẻ đã được khóa tại vị trí đúng.";selected=null}else{$("#dragFeedback").textContent="Chưa đúng — thẻ đã trở về kho. Hãy thử lại nhé!";tile.classList.remove("selected");selected=null}}
+function bindInteractions(){
+  $("#submitBtn").addEventListener("click",grade);
+  $$('.tile').forEach(tile=>{tile.addEventListener("click",()=>selectTile(tile));tile.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectTile(tile)}});tile.addEventListener("dragstart",e=>{if(tile.classList.contains("locked")){e.preventDefault();return}e.dataTransfer.setData("text/plain",tile.dataset.id);selected=tile});tile.draggable=true});
+  $$('.drop-slot').forEach(slot=>{slot.addEventListener("click",()=>{if(selected)place(selected,slot);else $("#dragFeedback").textContent="Hãy chạm chọn một thẻ trong kho trước."});slot.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&selected){e.preventDefault();place(selected,slot)}});slot.addEventListener("dragover",e=>e.preventDefault());slot.addEventListener("drop",e=>{e.preventDefault();const id=e.dataTransfer.getData("text/plain"),tile=$(`.tile[data-id="${id}"]`);if(tile)place(tile,slot)})});
+  $("#resetBtn").addEventListener("click",resetAll);
+}
+function resetAll(){
+  document.querySelectorAll('input[type="radio"]').forEach(i=>i.checked=false);
+  $$('input.fillinput').forEach(i=>{i.value="";i.style.borderColor="var(--line)";$(".feedback",i.parentElement).textContent=""});
+  $$(".question .feedback").forEach(f=>f.textContent="");$$(".opt").forEach(o=>o.classList.remove("correct","wrong"));$$(".tfrow").forEach(q=>q.style.background="transparent");$("#tfFeedback").textContent="";
+  $$(".match-item").forEach(q=>{q.classList.remove("correct","wrong");$("select",q).value=""});$$(".tile").forEach(t=>{t.classList.remove("locked","selected");t.removeAttribute("aria-disabled")});$$(".drop-slot").forEach(s=>{s.classList.remove("correct","celebrate");$(".slot-content",s).className="slot-content hint";$(".slot-content",s).textContent="Chạm vào đây để đặt thẻ";$(".slotmsg",s)?.remove()});
+  selected=null;$("#dragFeedback").textContent="Hãy chọn một thẻ để bắt đầu nhé!";$("#result").classList.remove("show");$("#result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+render();
+</script></body></html>
